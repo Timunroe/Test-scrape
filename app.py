@@ -75,6 +75,16 @@ def star_process(s_url):
     else:
         d_temp_data['deck'] = ""
 
+    # images = type image, class = image
+    # img ==> article > div.article__loader > div:nth-child(2) > div > div > div > figure > div > img
+    # p ==> div.article__body  > div.trackContent-3.blur_effect.hideRegistration > p:nth-child(3)
+    # div.youtube__body
+
+    if soup.find_all("figure", class_="image"):
+        print("Found figure")
+        for x in soup.find_all("figure", class_="image"):
+            print(x)
+
     s_paras = ""
     for para in soup.find_all('p'):
         # paragraphs with any class aren't part of actual article body.

@@ -9,6 +9,8 @@ pyperclip = "*"
 requests = "*"
 pylint = "*"
 "beautifulsoup4" = "*"
+"flake8" = "*"
+"autopep8" = "*"
 
 [dev-packages]
 
